@@ -14,26 +14,26 @@ namespace Be.Vlaanderen.Basisregisters.DependencyInjection.Tests
         }
 
         [Fact]
-        public void AddModules()
+        public void RegisterModules()
         {
             var services = new ServiceCollection();
-            services.AddModules(new TestModule());
+            services.RegisterModules(new TestModule());
             Assert.True(services.Count == 1);
         }
 
         [Fact]
-        public void AddModule()
+        public void RegisterModule()
         {
             var services = new ServiceCollection();
-            services.AddModule(new TestModule());
+            services.RegisterModule(new TestModule());
             Assert.True(services.Count == 1);
         }
 
         [Fact]
-        public void AddModuleGeneric()
+        public void RegisterModuleGeneric()
         {
             var services = new ServiceCollection();
-            services.AddModule<TestModule>();
+            services.RegisterModule<TestModule>();
             Assert.True(services.Count == 1);
         }
     }

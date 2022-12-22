@@ -3,21 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FE3D9235-A269-420C-8460-E98601C827B4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8B3EEF1F-9B22-46EA-8FC4-022B758DB80A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C1A0033B-CC39-4C33-82C9-8D4AA4989E41}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C4624E2A-1188-4A39-833C-9772B16BDF9C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{614AA0AC-E797-4DB7-820D-2A64967D3CCE}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		build.fsx = build.fsx
 		build.sh = build.sh
 		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
 		global.json = global.json
 		paket.dependencies = paket.dependencies
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions.Microsoft.DependencyInjection", "src\Extensions.Microsoft.DependencyInjection\Extensions.Microsoft.DependencyInjection.csproj", "{BF931D72-A8F1-4C84-BA02-11F2C31C3ADB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensions.Microsoft.DependencyInjection", "src\Extensions.Microsoft.DependencyInjection\Extensions.Microsoft.DependencyInjection.csproj", "{5C7EBBEB-5048-47BC-94E7-FA187C7A00A3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensions.Microsoft.DependencyInjection.Tests", "test\Extensions.Microsoft.DependencyInjection.Tests\Extensions.Microsoft.DependencyInjection.Tests.csproj", "{D542CC10-91EC-4902-8E19-F8AC1FA0FB12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensions.Microsoft.DependencyInjection.Tests", "test\Extensions.Microsoft.DependencyInjection.Tests\Extensions.Microsoft.DependencyInjection.Tests.csproj", "{4C27D358-F5ED-489C-8EE5-EEF8C227E34B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,22 +29,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BF931D72-A8F1-4C84-BA02-11F2C31C3ADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BF931D72-A8F1-4C84-BA02-11F2C31C3ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BF931D72-A8F1-4C84-BA02-11F2C31C3ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BF931D72-A8F1-4C84-BA02-11F2C31C3ADB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D542CC10-91EC-4902-8E19-F8AC1FA0FB12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D542CC10-91EC-4902-8E19-F8AC1FA0FB12}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D542CC10-91EC-4902-8E19-F8AC1FA0FB12}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D542CC10-91EC-4902-8E19-F8AC1FA0FB12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C7EBBEB-5048-47BC-94E7-FA187C7A00A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C7EBBEB-5048-47BC-94E7-FA187C7A00A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C7EBBEB-5048-47BC-94E7-FA187C7A00A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C7EBBEB-5048-47BC-94E7-FA187C7A00A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C27D358-F5ED-489C-8EE5-EEF8C227E34B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C27D358-F5ED-489C-8EE5-EEF8C227E34B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C27D358-F5ED-489C-8EE5-EEF8C227E34B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C27D358-F5ED-489C-8EE5-EEF8C227E34B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{D542CC10-91EC-4902-8E19-F8AC1FA0FB12} = {FE3D9235-A269-420C-8460-E98601C827B4}
+		{5C7EBBEB-5048-47BC-94E7-FA187C7A00A3} = {8B3EEF1F-9B22-46EA-8FC4-022B758DB80A}
+		{4C27D358-F5ED-489C-8EE5-EEF8C227E34B} = {C4624E2A-1188-4A39-833C-9772B16BDF9C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0E4D69F5-D408-4645-8321-85FBA2B71C27}
+		SolutionGuid = {1D9F7C8F-F524-4C10-A12F-AE3E8F28954E}
 	EndGlobalSection
 EndGlobal
