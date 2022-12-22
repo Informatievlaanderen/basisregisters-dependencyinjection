@@ -5,7 +5,7 @@ namespace Be.Vlaanderen.Basisregisters.DependencyInjection
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection AddModules(this IServiceCollection services, params IServiceCollectionModule[] modules)
+        public static IServiceCollection RegisterModules(this IServiceCollection services, params IServiceCollectionModule[] modules)
         {
             ArgumentNullException.ThrowIfNull(services);
 
@@ -17,7 +17,7 @@ namespace Be.Vlaanderen.Basisregisters.DependencyInjection
             return services;
         }
 
-        public static IServiceCollection AddModule(this IServiceCollection services, IServiceCollectionModule module)
+        public static IServiceCollection RegisterModule(this IServiceCollection services, IServiceCollectionModule module)
         {
             ArgumentNullException.ThrowIfNull(services);
 
@@ -25,12 +25,12 @@ namespace Be.Vlaanderen.Basisregisters.DependencyInjection
             return services;
         }
 
-        public static IServiceCollection AddModule<TModule>(this IServiceCollection services)
+        public static IServiceCollection RegisterModule<TModule>(this IServiceCollection services)
             where TModule : IServiceCollectionModule, new()
         {
             ArgumentNullException.ThrowIfNull(services);
 
-            return services.AddModule(new TModule());
+            return services.RegisterModule(new TModule());
         }
     }
 }
