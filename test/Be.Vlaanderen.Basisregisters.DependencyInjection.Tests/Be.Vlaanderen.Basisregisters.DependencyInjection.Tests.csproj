@@ -1,9 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
-
     <IsPackable>false</IsPackable>
 
     <RootNamespace>Be.Vlaanderen.Basisregisters.DependencyInjection.Tests</RootNamespace>
@@ -19,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Extensions.Microsoft.DependencyInjection\Extensions.Microsoft.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\src\Be.Vlaanderen.Basisregisters.DependencyInjection\Be.Vlaanderen.Basisregisters.DependencyInjection.csproj" />
   </ItemGroup>
 
 </Project>

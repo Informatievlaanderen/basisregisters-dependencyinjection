@@ -35,10 +35,10 @@ Target.create "Lib_Build" (fun _ ->
 Target.create "Test_Solution" (fun _ -> test "basisregisters-dependencyinjection")
 
 Target.create "Lib_Publish" (fun _ ->
-    publishSource "Extensions.Microsoft.DependencyInjection"
+    publishSource "Be.Vlaanderen.Basisregisters.DependencyInjection"
 )
 
-Target.create "Lib_Pack" (fun _ -> pack "Extensions.Microsoft.DependencyInjection")
+Target.create "Lib_Pack" (fun _ -> pack "Be.Vlaanderen.Basisregisters.DependencyInjection")
 
 // --------------------------------------------------------------------------------
 Target.create "PublishAll" ignore

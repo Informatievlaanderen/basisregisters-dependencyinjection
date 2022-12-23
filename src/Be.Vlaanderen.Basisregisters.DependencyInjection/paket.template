@@ -12,7 +12,7 @@ projectUrl https://github.com/Informatievlaanderen/basisregisters-dependencyinje
 iconUrl https://raw.githubusercontent.com/Informatievlaanderen/build-pipeline/master/logo.png
 licenseUrl https://opensource.org/licenses/MIT
 
-description ACM/IDM utilities for C#.
+description Dependency injection utilities for C#.
 
 dependencies
   framework: net6.0
