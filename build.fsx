@@ -12,18 +12,12 @@ nuget Be.Vlaanderen.Basisregisters.Build.Pipeline 6.0.6 //"
 
 #load "packages/Be.Vlaanderen.Basisregisters.Build.Pipeline/Content/build-generic.fsx"
 
-open Fake
 open Fake.Core
 open Fake.Core.TargetOperators
-open Fake.IO
 open Fake.IO.FileSystemOperators
 open ``Build-generic``
 
-let product = "Basisregisters Vlaanderen"
-let copyright = "Copyright (c) Vlaamse overheid"
-let company = "Vlaamse overheid"
-
-let assemblyVersionNumber = (sprintf "2.%s")
+let assemblyVersionNumber = (sprintf "%s.0")
 let nugetVersionNumber = (sprintf "%s")
 
 let buildSolution = buildSolution assemblyVersionNumber
@@ -41,10 +35,10 @@ Target.create "Lib_Build" (fun _ ->
 Target.create "Test_Solution" (fun _ -> test "basisregisters-dependencyinjection")
 
 Target.create "Lib_Publish" (fun _ ->
-    publishSource "Be.Vlaanderen.Basisregisters.DependencyInjection"
+    publishSource "Extensions.Microsoft.DependencyInjection"
 )
 
-Target.create "Lib_Pack" (fun _ -> pack "Be.Vlaanderen.Basisregisters.DependencyInjection")
+Target.create "Lib_Pack" (fun _ -> pack "Extensions.Microsoft.DependencyInjection")
 
 // --------------------------------------------------------------------------------
 Target.create "PublishAll" ignore
