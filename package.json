@@ -1,6 +1,6 @@
 {
   "name": "basisregisters-dependencyinjection",
-  "version": "1.7.13",
+  "version": "1.0.0",
   "description": "A library to facilitate usage of Microsoft.Extensions.DependencyInjection in our registries.",
   "author": "Basisregisters Vlaanderen",
   "license": "EUPL-1.2",
