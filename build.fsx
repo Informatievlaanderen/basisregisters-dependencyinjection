@@ -54,6 +54,7 @@ Target.create "Pack_Solution" (fun _ ->
 
 Target.create "Build" ignore
 Target.create "Test" ignore
+Target.create "Publish" ignore
 Target.create "Pack" ignore
 Target.create "Push" ignore
 
