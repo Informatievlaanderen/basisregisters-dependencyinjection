@@ -120,7 +120,7 @@
       },
       {
         "path": "@semantic-release/exec",
-        "cmd": "CI_BUILD_NUMBER=${nextRelease.version} ./build.sh Containerize"
+        "cmd": "CI_BUILD_NUMBER=${nextRelease.version} ./build.sh PackageAll"
       },
       {
         "path": "@semantic-release/git",
