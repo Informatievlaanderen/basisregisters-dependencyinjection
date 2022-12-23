@@ -2,7 +2,13 @@
 version 7.0.2
 framework: net6.0
 source https://api.nuget.org/v3/index.json
-nuget Be.Vlaanderen.Basisregisters.Build.Pipeline 6.0.5 //"
+
+nuget Microsoft.Build 17.3.2
+nuget Microsoft.Build.Framework 17.3.2
+nuget Microsoft.Build.Tasks.Core 17.3.2
+nuget Microsoft.Build.Utilities.Core 17.3.2
+
+nuget Be.Vlaanderen.Basisregisters.Build.Pipeline 6.0.6 //"
 
 #load "packages/Be.Vlaanderen.Basisregisters.Build.Pipeline/Content/build-generic.fsx"
 
@@ -21,61 +27,39 @@ let assemblyVersionNumber = (sprintf "2.%s")
 let nugetVersionNumber = (sprintf "%s")
 
 let buildSolution = buildSolution assemblyVersionNumber
-let buildSource = build assemblyVersionNumber
-let buildTest = buildTest assemblyVersionNumber
-let setVersions = (setSolutionVersions assemblyVersionNumber product copyright company)
-let test = testSolution
 let publishSource = publish assemblyVersionNumber
-let pack = pack nugetVersionNumber
+let pack = packSolution nugetVersionNumber
+let test = testSolution
 
-supportedRuntimeIdentifiers <- [ "msil"; "linux-x64" ]
+supportedRuntimeIdentifiers <- [ "linux-x64" ] 
 
-// Solution -----------------------------------------------------------------------
-
-Target.create "Restore_Solution" (fun _ -> restore "basisregisters-dependencyinjection")
-
-Target.create "Build_Solution" (fun _ ->
-  setVersions "SolutionInfo.cs"
-  buildSolution "basisregisters-dependencyinjection")
+// Library ------------------------------------------------------------------------
+Target.create "Lib_Build" (fun _ ->
+    buildSolution "basisregisters-dependencyinjection"
+)
 
 Target.create "Test_Solution" (fun _ -> test "basisregisters-dependencyinjection")
 
-Target.create "Publish_Solution" (fun _ ->
-  [
-    "Extensions.Microsoft.DependencyInjection"
-  ] |> List.iter publishSource)
+Target.create "Lib_Publish" (fun _ ->
+    publishSource "Be.Vlaanderen.Basisregisters.DependencyInjection"
+)
 
-Target.create "Pack_Solution" (fun _ ->
-  [
-    "Extensions.Microsoft.DependencyInjection"
-  ] |> List.iter pack)
+Target.create "Lib_Pack" (fun _ -> pack "Be.Vlaanderen.Basisregisters.DependencyInjection")
 
 // --------------------------------------------------------------------------------
+Target.create "PublishAll" ignore
+Target.create "PackageAll" ignore
 
-Target.create "Build" ignore
-Target.create "Test" ignore
-Target.create "Publish" ignore
-Target.create "Pack" ignore
-Target.create "Push" ignore
+"DotNetCli"
+==> "Clean"
+==> "Restore"
+==> "Lib_Build"
+==> "Test_Solution"
+==> "Lib_Publish"
+==> "PublishAll"
 
-"NpmInstall"
-  ==> "DotNetCli"
-  ==> "Clean"
-  ==> "Restore_Solution"
-  ==> "Build_Solution"
-  ==> "Build"
+"PublishAll"
+==> "Lib_Pack"
+==> "PackageAll"
 
-"Build"
-  ==> "Test_Solution"
-  ==> "Test"
-
-"Test"
-  ==> "Publish_Solution"
-  ==> "Publish"
-
-"Publish"
-  ==> "Pack_Solution"
-  ==> "Pack"
-
-// By default we build & test
-Target.runOrDefault "Test"
+Target.runOrDefault "Test_Solution"
