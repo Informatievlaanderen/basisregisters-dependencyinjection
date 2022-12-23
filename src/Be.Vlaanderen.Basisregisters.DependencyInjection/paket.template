@@ -19,5 +19,5 @@ dependencies
     Microsoft.Extensions.DependencyInjection.Abstractions >= LOCKEDVERSION
 
 files
-  bin\Release\net6.0\Be.Vlaanderen.Basisregisters.DependencyInjection.dll => lib\net6.0
-  bin\Release\net6.0\Be.Vlaanderen.Basisregisters.DependencyInjection.pdb => lib\net6.0
+  Be.Vlaanderen.Basisregisters.DependencyInjection.dll => lib\net6.0
+  Be.Vlaanderen.Basisregisters.DependencyInjection.pdb => lib\net6.0
