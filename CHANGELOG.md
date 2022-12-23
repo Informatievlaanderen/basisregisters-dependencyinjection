@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/informatievlaanderen/basisregisters-dependencyinjection/compare/v1.0.0...v1.0.1) (2022-12-23)
+
+
+### Bug Fixes
+
+* fix package.json ([d0da7c2](https://github.com/informatievlaanderen/basisregisters-dependencyinjection/commit/d0da7c25ca5f433945051206fdfd86e14b2c899c))
+* update package-lock.json GRRRRR ([e1125dc](https://github.com/informatievlaanderen/basisregisters-dependencyinjection/commit/e1125dc788ed0e206af3f4418c6587533feb2481))
+
 # 1.0.0 (2022-12-23)
 
 
