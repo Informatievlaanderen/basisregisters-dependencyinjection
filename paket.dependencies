@@ -9,8 +9,8 @@ nuget Be.Vlaanderen.Basisregisters.Build.Pipeline 6.0.6
 nuget Microsoft.Extensions.DependencyInjection.Abstractions 6.0.0
 
 // TEST STUFF
-nuget Microsoft.NET.Test.Sdk 17.1.0
-nuget xunit 2.4.1
+nuget Microsoft.NET.Test.Sdk 17.4.0
+nuget xunit 2.4.2
 nuget xunit.runner.visualstudio 2.4.3
 nuget xunit.categories 2.0.6
 
