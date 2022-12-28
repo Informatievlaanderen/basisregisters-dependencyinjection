@@ -1,3 +1,17 @@
+## [1.0.2](https://github.com/informatievlaanderen/basisregisters-dependencyinjection/compare/v1.0.1...v1.0.2) (2022-12-28)
+
+
+### Bug Fixes
+
+* always include paket.template ([8fc3b30](https://github.com/informatievlaanderen/basisregisters-dependencyinjection/commit/8fc3b30dcccba328e5e09ef696a630d46749f0e5))
+* do not copy paket.template ([1674700](https://github.com/informatievlaanderen/basisregisters-dependencyinjection/commit/16747002ecd4babb6f09f64b6fbbb49c639912c3))
+* equalize release.yml & paket.template ([6904eea](https://github.com/informatievlaanderen/basisregisters-dependencyinjection/commit/6904eea1bad0af71f465a75b4bcc97749c240507))
+* fix path in paket.template ([7016726](https://github.com/informatievlaanderen/basisregisters-dependencyinjection/commit/70167263a84d42813430814060e46470c054c8d7))
+* try & change paket.template path again ([262c5be](https://github.com/informatievlaanderen/basisregisters-dependencyinjection/commit/262c5bea5d208d7303b1ec82e00fa3ba6b774bf2))
+* try some things ([1294a5f](https://github.com/informatievlaanderen/basisregisters-dependencyinjection/commit/1294a5ff793396832c67206c82d55c52da11c8a4))
+* update nuget command ([e72fa56](https://github.com/informatievlaanderen/basisregisters-dependencyinjection/commit/e72fa56779fffecd7a22e1b30dbe32f22aac9420))
+* use GITHUB_TOKEN ([d6d8533](https://github.com/informatievlaanderen/basisregisters-dependencyinjection/commit/d6d853365aa36c4c4b7c9b28459213add0769b5f))
+
 ## [1.0.1](https://github.com/informatievlaanderen/basisregisters-dependencyinjection/compare/v1.0.0...v1.0.1) (2022-12-23)
 
 
