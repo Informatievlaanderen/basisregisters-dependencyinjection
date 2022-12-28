@@ -1,1 +1,4 @@
+SourceLink.Embed.AllSourceFiles
+SourceLink.Copy.PdbFiles
+
 Microsoft.Extensions.DependencyInjection.Abstractions
