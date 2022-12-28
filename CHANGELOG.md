@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/informatievlaanderen/basisregisters-dependencyinjection/compare/v1.0.2...v1.0.3) (2022-12-28)
+
+
+### Bug Fixes
+
+* add owned instances ([529c341](https://github.com/informatievlaanderen/basisregisters-dependencyinjection/commit/529c3411776ded5d94e570758ec43d65244a2c43))
+
 ## [1.0.2](https://github.com/informatievlaanderen/basisregisters-dependencyinjection/compare/v1.0.1...v1.0.2) (2022-12-28)
 
 
