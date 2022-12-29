@@ -1,7 +1,7 @@
 <Project>
   <ItemGroup>
     <PackageVersion Include="Be.Vlaanderen.Basisregisters.Build.Pipeline" Version="6.0.6" />
-    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.4.0" />
     <PackageVersion Include="SourceLink.Embed.AllSourceFiles" Version="2.8.3" />
     <PackageVersion Include="SourceLink.Copy.PdbFiles" Version="2.8.3" />
